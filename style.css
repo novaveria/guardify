@@ -1,0 +1,762 @@
+
+:root{
+    --bg: #1c1c1c;
+    --accent: #d4b264;
+    --muted: #bfbfbf;
+    --orange: orange;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    transition: scroll-behavior 0.5s ease-in-out;
+}
+
+span{
+    font-family: 'Orbitron', sans-serif;
+    font-style: italic;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    position: fixed;
+    color: #fff;
+    transition: all 0.3s ease;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0));
+}
+
+.navbar.navbar-scrolled {
+    background:var(--bg);
+    padding: 1.4rem 7%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .navbar-extra .contact-sm {
+    display: inline-block;
+    margin-right: 1rem;
+}
+.navbar .logo{  
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 48px;
+    width: auto;
+}
+.navbar .logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.navbar .navbar-nav{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.navbar .navbar-nav .nav-menu{
+    margin: 0 1.4rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem; 
+}
+
+.navbar .navbar-nav .nav-menu::after{
+    content: ' ';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid #fff;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+.navbar .navbar-nav .nav-menu:hover::after{
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra .nav-menu{
+    display: inline-block;
+    color: black;
+    margin: 0 0.5rem;
+    z-index: 10000;
+}
+
+#hamburger-menu{
+    display: none;
+    background: transparent;
+    color: #fff;
+}
+
+/* NAVBAR END */
+
+/* HERO */
+.hero{
+    background: url(pixel.jpg) no-repeat center center/cover;
+    height: 80vh;
+    object-fit: cover;
+    object-position: center;
+    color: #fff;
+}
+
+.hero .bg-black{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.hero .content{
+    text-align: left;
+    width: 60%;
+    padding: 0 7%;
+}
+.hero .content h2{
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+.hero .content p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.hero .content a{
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--accent);
+    color: #0e131b;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.hero .content a:hover{
+    background-color: #e3c177;
+}
+
+/* ABOUT START */
+.about{
+    text-align: center;
+    padding: 4rem 7%;
+    display: flex;
+}
+.about-image{
+    width: 50%; 
+    display: block;
+}
+
+.about-image img{
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-text{
+    width: 50%;
+    text-align: left;
+}
+.about-text p{
+    text-align: justify;
+    font-size: 1.1rem;
+    /* line-height: 1.6; */
+    margin-top: 1rem ; 
+}
+.about-text h2{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+/* ABOUT END */
+
+/* MENUS START */
+.law-section {
+    padding: 5rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Header */
+.section-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+  color: #b2b2b2;
+  font-size: 1rem;
+  margin-bottom: 50px;
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.law-card {
+  background-color: #151b25;
+  border: 1px solid #1f2633;
+  border-radius: 10px;
+  padding: 40px 30px;
+  transition: all 0.3s ease;
+}
+
+.law-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Icon */
+.icon {
+  color: #d4b264;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+/* Text */
+.law-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.law-card p {
+  color: #bfbfbf;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Merriweather', serif;
+}
+
+.btn-gold {
+    background-color: #d4b264;
+    color: #0e131b;
+    border: none;
+}
+
+.btn-gold:hover {
+    background-color: #e3c177;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #d4b264;
+    color: #d4b264;
+}
+
+.btn-outline:hover {
+    background-color: #d4b264;
+    color: #0e131b;
+}
+/* MENUS END */
+/* BG FIXED */
+.bg-fixed{
+    background: url(stik.jpg) no-repeat center center/cover fixed;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.bg-fixed .bg-black{
+    padding: 4rem 7%;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.bg-black .content h2{
+    font-weight: 500;
+}
+.bg-fixed .bg-black span{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+/* BG FIXED END */
+/* FORM START */
+.form-container{
+    background: var(--bg) ;
+    color: #fff;
+    display: flex;
+    padding: 2rem 0;
+}
+
+.form-container form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 0 10%;
+}
+.form-container form h1{
+    font-size: 1.8rem;
+    padding: 2.5rem 0;
+}
+.form-container form input{
+    width: 100;
+    padding: 1rem 2rem;
+    border: none;
+}   
+
+.form-container form .message{
+    border: none;
+    height: 8rem;
+    resize: vertical;
+    width: 100%;
+    /* max-width: 20rem; */
+    text-align: left;
+    padding: 1rem;
+    overflow-y: auto;
+    vertical-align: top;
+}
+
+.form-container form .btn{
+    width: 10rem;
+    padding: 1rem 2rem;
+    border: none;
+    background: #fff;
+    color: var(--bg);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-container form .btn:hover{
+    background: var(--accent);
+    color: #fff;
+}
+
+.form-container{
+    background: var(--bg);
+    color: #fff;
+    display: flex;
+    padding: 5rem 0;
+    align-items: center; /* pusatkan .line secara vertikal terhadap form */
+}
+
+/* form tetap sama */
+.form-container .line{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* tengah secara vertikal */
+    align-items: flex-start;  /* isi (h2, p) rata ke kiri */
+    padding: 0 10%;
+}
+
+/* tata letak tiap baris kontak: icon dalam kotak + teks rapi */
+.form-container .line p{
+    font-size: 1.1rem;
+    margin: 0.4rem 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #fff;
+}
+
+/* kotak pembungkus ikon */
+.form-container .line .icon-box{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    min-width: 2.4rem;
+    border-radius: 8px;
+    border: 1px solid var(--accent);
+    background: rgba(0,0,0,0.1);
+    color: var(--accent);
+}
+
+/* pastikan ikon (feather -> svg) ukurannya dan warnanya sesuai */
+.form-container .line .icon-box svg{
+    width: 1.2rem;
+    height: 1.2rem;
+    stroke: var(--accent);
+    stroke-width: 2px;
+    fill: none;
+}
+
+/* judul tetap rata kiri dan jarak rapi */
+.form-container .line h2{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* FORM END */
+
+/* FOOTER START */
+footer{
+    background-color: black;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: space-between;
+    font-weight: 300;
+}
+footer .left{
+    /* display: inline-block; */
+    padding: 3.2rem 7%;
+    width: 50%;
+}
+
+footer .left img{
+    width: 250px;
+    margin-bottom: 1.2rem;
+}
+
+.left .social-media{
+    display: flex;
+    align-items: center;
+    gap: 0.08rem;
+    margin-top: 1.2rem;
+}
+
+.left .social-media a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-right: 0.8rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background: transparent;
+    /* transition: background 0.2s, color 0.2s, border-color 0.2s; */
+    border: 1px solid var(--accent);
+}
+
+.left .social-media a:hover{
+    color: black;
+    background-color: var(--accent);
+}
+
+footer .right{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+    padding: 3.2rem 2.2rem;
+    gap: 1.2rem;
+    
+}
+
+footer .right .content {
+    width: 100%;
+    text-align: left;
+}
+
+footer .right .content p{
+    display: flex;
+    align-items: flex-start;
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    gap: 0.7rem;
+    font-size: 1.1rem;
+    text-align: left;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+}
+
+footer .right .content p span{
+    color: var(--accent);
+}
+
+footer .right .content .map-pin, footer .right .content i, 
+footer .right .content svg{
+    width: 1.3em;
+    height: 1.3em;
+    min-width: 1.3em;
+    min-height: 1.3em;
+    vertical-align: middle;
+    margin-right: 0.3em;
+    color: var(--accent);
+    /* Hilangkan border jika ada */
+    border: none;
+    /* Agar icon tidak terlalu tebal */
+    stroke-width: 2px;
+}
+
+.last-footer{
+    /* display: block; */
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 0 ;
+    border-top: 1px solid #666;
+}
+
+.last-footer h2{
+    font-weight: 100;
+    font-size: 0.95rem;
+}
+/* FOOTER END */
+
+/* ...existing code... */
+.form-error {
+    background: #fff0f0;
+    color: #8a0000;
+    border-left: 4px solid #e07a7a;
+    padding: 0.8rem 1rem;
+    margin: 1rem 0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+input.invalid, textarea.invalid {
+    box-shadow: 0 0 0 3px rgba(208,50,50,0.06);
+    outline: 2px solid rgba(208,50,50,0.12);
+}
+/* RESPONSIVE TAB */
+@media (max-width: 1366px){
+    html{
+        font-size: 75%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    html { 
+        font-size: 62.5%;
+    }
+
+    /* Navbar Mobile */
+    .navbar {
+        padding: 1rem 5%;
+    }
+
+    .navbar .navbar-extra .contact-sm {
+        display: none;
+    }    
+
+    #hamburger-menu {
+        display: inline-block;
+        padding: 0.5rem;
+    }
+
+    .navbar .navbar-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 260px;
+        height: 100vh;
+        background-color: var(--bg);
+        padding-top: 80px;
+        transition: 0.3s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+        /* Tambahkan properti flex berikut */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav .nav-menu {
+        display: block;
+        width: 100%;           /* Tambahkan full width */
+        padding: 1rem 1.5rem;
+        margin: 0.5rem 0;      /* Hapus margin horizontal */
+        font-size: 1.1rem;
+        border-radius: 6px;
+        transition: 0.2s;
+    }
+
+    .navbar .navbar-nav .nav-menu:hover {
+        background: rgba(255,255,255,0.1);
+    }
+
+    /* Hero Mobile */
+    .hero{
+        height: 60vh;           
+    }
+    .hero .content {
+        width: 100%;
+        padding: 0 5%;
+        text-align: center;
+    }
+
+    .hero .content h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero .content p {
+        font-size: 1rem;
+    }
+
+    /* About Mobile */
+    .about {
+        flex-direction: column;
+        padding: 3rem 5%;
+        gap: 2rem;
+    }
+
+    .about-image,
+    .about-text {
+        width: 100%;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-text p {
+        text-align: justify;
+        font-size: 1rem;
+        padding: 0 5%;
+    }
+
+    .section-header p{
+        padding: 0 10%;
+    }
+    .card-grid .law-card h3{
+        font-size: 2.5rem;
+    }
+    .bg-fixed{
+        width: 100%;
+        max-height: 40vh;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        min-height: unset !important;
+    }
+    /* Form Mobile */
+    .form-container {
+        flex-direction: column;
+        padding: 3rem 0;
+    }
+
+    .form-container form,
+    .form-container .line {
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    .form-container form {
+        gap: 1rem;
+    }
+
+    .form-container form h1 {
+        padding: 1.5rem 0;
+        font-size: 1.6rem;
+    }
+    .form-container form button{
+        margin-bottom: 5rem;
+
+    } 
+
+    /* Footer Mobile */
+    footer {
+        flex-direction: column;
+    }
+
+    footer .left,
+    footer .right {
+        width: 100%;
+        padding: 2rem 5%;
+    }
+
+    footer .right .content p {
+        font-size: 1rem;
+    }
+
+    .last-footer {
+        padding: 1.5rem 5%;
+    }
+}
+
+/* Small phones */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+    .hero .content h2 {
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-nav {
+        width: 240px;
+    }
+}
+
+/* Add these keyframes after your existing keyframes */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Modify the existing .about-image and .about-text classes */
+.about-image {
+    width: 50%;
+    display: block;
+    opacity: 0;
+    animation: slideInLeft 1s ease forwards;
+}
+
+.about-text {
+    width: 50%;
+    text-align: left;
+    opacity: 0;
+    animation: slideInRight 1s ease forwards;
+}
+
+/* Add this class for JavaScript intersection observer */
+.about.show .about-image {
+    animation: slideInLeft 1s ease forwards;
+}
+
+.about.show .about-text {
+    animation: slideInRight 1s ease forwards;
+}
